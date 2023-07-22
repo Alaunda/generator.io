@@ -1,57 +1,63 @@
-var allQuotes=[
-    "I'm proud of you.",
+const quoteGen= function (){
+  const quotes=[
+    {quote: "I'm proud of you."},
     
-    "The journey doesn't end just because you have to put things down...keep going!",
+    {quote:"The journey doesn't end just because you have to put things down...keep going!"},
     
-    "You are capable of doing difficult things and making difficult choices if it's for your betterment. Trust you.",
+    {quote:"You are capable of doing difficult things and making difficult choices if it's for your betterment. Trust you."},
     
-    "It is okay to rest! Remember: procrastination isn't rest.",
+    {quote:"It is okay to rest! Remember: procrastination isn't rest."},
     
-    "No rain, no flowers. All the bad is preparing you for all the good.",
+    {quote:"No rain, no flowers. All the bad is preparing you for all the good."},
     
-    "You have an amazing smile.",
+    {quote:"You have an amazing smile."},
     
-    "You are beautiful.",
+    {quote:"You are beautiful."},
     
-    "You're incredibly smart!",
+    {quote:"You're incredibly smart!"},
     
-    "Your brighten the room just by entering it.",
+    {quote:"Your brighten the room just by entering it."},
     
-    "You find the best of every situation.",
+    {quote:"You find the best of every situation."},
     
-    "You are perfect just the way you are.",
+    {quote:"You are perfect just the way you are."},
     
-    "You are not a mistake.",
+    {quote:"You are not a mistake."},
     
-    "The world is a better place with you in it.",
+    {quote:"The world is a better place with you in it."},
     
-    "I appreciate and value your existence.",
+    {quote:"I appreciate and value your existence."},
     
-    "You give and remind me of hope.",
+    {quote:"You give and remind me of hope."},
     
-    "Thank you for being alive.",
+    {quote:"Thank you for being alive."},
     
-    "The world is tough enough, be nice to yourself.",
+    {quote:"The world is tough enough, be nice to yourself."},
     
-    "You deserve the love you give your best friend.",
+    {quote:"You deserve the love you give your best friend."},
     
-    "People love spending time with you!",
+    {quote:"People love spending time with you!"},
     
-    "You are loved.",
+    {quote:"You are loved."},
     
-    "I'd give you my last piece of gum.",
+    {quote:"I'd give you my last piece of gum."},
     
-    "Experiencing your energy has always been my faorite thing.",
+    {quote:"Experiencing your energy has always been my faorite thing."},
     
-    "You are the Universe.",
+    {quote:"You are the Universe."},
     
-    "Thank you for being you.",
+    {quote:"Thank you for being you."},
     
-    "I admire your confidence!",
+    {quote:"I admire your confidence!"},
     
-    "You are perfect the way you are."
-  ]
+    {quote:"You are perfect the way you are."}
+]; 
+let arrayIndex= Math.floor(Math.random()*quotes.length);
   
-  function newphrase(){
-    var randomNumber=Math.floor(Math.random()*(allQuotes.length));  document.getElementById('kindnessDisplay').innerHTML=quotes[randomNumber];
-  }
+document.getElementById("quotes").innerHTML=quotes[arrayIndex].quote;
+}
+
+window.onload= function (){
+  quoteGen();
+  document.getElementById("button").addEventListener('click',quoteGen);
+}
